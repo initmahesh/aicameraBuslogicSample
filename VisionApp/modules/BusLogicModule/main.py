@@ -156,5 +156,4 @@ def main(protocol):
         print ( "IoTHubModuleClient sample stopped" )
 
 if __name__ == '__main__':
-    #main(PROTOCOL)
-    send_mail("test")
+    main(PROTOCOL)
