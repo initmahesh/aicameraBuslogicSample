@@ -51,7 +51,7 @@
             "status": "running",
             "restartPolicy": "always",
             "settings": {
-              "image": "mycapreg.azurecr.io/visionsamplemodule:1.0.4_demo_no_model-arm32v7",
+              "image": "mcr.microsoft.com/aivision/visionsamplemodule:1.0.4_SSD-arm32v7",
               "createOptions": "{\"User\":\"root\",\"HostConfig\":{\"Binds\":[\"/data/misc/camera:/app/vam_model_folder\"],\"NetworkMode\":\"host\"},\"NetworkingConfig\":{\"EndpointsConfig\":{\"host\":{}}}}"
             }
           },
