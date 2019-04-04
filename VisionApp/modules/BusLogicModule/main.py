@@ -51,6 +51,7 @@ def receive_message_callback(message, hubManager):
     global RECEIVE_CALLBACKS
     global OBJECT_OF_INTEREST
     global OBJECT_CONFIDENCE
+    global Email_To_SendNotification
     message_buffer = message.get_bytearray()
     size = len(message_buffer)
     message_text = message_buffer[:size].decode('utf-8')
@@ -72,6 +73,7 @@ def module_twin_callback(update_state, payload, user_context):
     global TWIN_CALLBACKS
     global OBJECT_OF_INTEREST
     global OBJECT_CONFIDENCE
+    global Email_To_SendNotification
     print ( "\nTwin callback called with:\nupdateStatus = %s\npayload = %s\ncontext = %s" % (update_state, payload, user_context) )
     data = json.loads(payload)
     if "desired" in data and "ObjectOfInterest" in data["desired"]:
